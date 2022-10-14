@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: url('/background.jpg') no-repeat center center/cover;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Navbar below */
+
+nav {
+  max-width: 1100px;
+  height: 70px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+#logo {
+  font-size: 25px;
+  min-width: 75px;
+}
+
+#open-sidebar {
+  font-size: 25px;
+  min-width: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  width: auto;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 30px;
+}
+
+.link-btn {
+  border: none;
+  background-color: transparent;
+  padding: 2px;
+  font-size: 17px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.signin-btn {
+  display: inline-block;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 5px 15px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-right: 20px;
+  border: none;
+}
+
+.signin-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  #open-sidebar {
+    display: block;
+  }
+
+  .nav-header {
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .signin-btn {
+    display: none;
+  }
+}
+
+/* Hero below */
+
+.hero {
+  width: 100%;
+  height: auto;
+}
+
+.hero-center {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-info {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Sidebar below */
+
+.sidebar {
+  position: absolute;
+  width: 250px;
+  min-height: 100vh;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+  transform: translate(100%, -100%) scale(0);
+  background-color: rgb(34, 34, 34);
+  box-shadow: 0px 0px 5px white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.sidebar-active {
+  display: flex;
+  transform: translate(0%, 0%) scale(1);
+}
+
+#close-sidebar {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 25px;
+  min-width: 25px;
+  cursor: pointer;
+}
+
+.sidebar-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-links {
+  padding: 0px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 10px;
+}
+
+.sidebar-links > li > a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+}
+
+h3 {
+  text-transform: capitalize;
+  width: max-content;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+@media only screen and (max-width: 300px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* Submenu below */
+
+.submenu {
+  position: absolute;
+  width: auto;
+  max-width: 400px;
+  height: fit-content;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 5px white;
+  transition: 0.3s;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  display: none;
+}
+
+.submenu::before {
+  position: absolute;
+  content: '';
+  top: -10px;
+  border: 10px solid transparent;
+  border-top: 0;
+  border-bottom: 10px solid white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.show-submenu {
+  display: flex;
+}
+
+h4 {
+  color: black;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.submenu-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px 40px;
+}
+
+.submenu-list-1 {
+  grid-template-columns: 1fr;
+}
+
+.submenu-list-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.submenu-list-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.submenu-list-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.submenu-list li a {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+}
