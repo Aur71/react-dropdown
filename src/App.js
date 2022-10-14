@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect, useCallback } from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Hero from './Hero';
